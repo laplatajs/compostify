@@ -4,7 +4,8 @@
   "description": "Lets make compost cool again",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": "nodemon server/index.js -- demo"
   },
   "repository": {
     "type": "git",
@@ -19,8 +20,12 @@
   "homepage": "https://github.com/laplatajs/compostify#readme",
   "dependencies": {
     "edison-io": "^0.9.4",
+    "eventemitter2": "^2.1.3",
     "ip": "^1.1.3",
-    "johnny-five": "^0.10.1",
+    "serialport": "^4.0.3",
     "uws": "^0.10.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
