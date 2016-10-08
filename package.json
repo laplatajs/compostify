@@ -1,0 +1,23 @@
+{
+  "name": "compostify",
+  "version": "1.0.0",
+  "description": "Lets make compost cool again",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laplatajs/compostify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laplatajs/compostify/issues"
+  },
+  "homepage": "https://github.com/laplatajs/compostify#readme",
+  "dependencies": {
+    "johnny-five": "^0.10.1"
+  }
+}
