@@ -1,9 +1,9 @@
 function getRandomFloat(min, max) {
-  return parseFloat(Math.random() * (max - min)).toFixed(1) + min;
+    return parseFloat(Math.random() * (max - min)).toFixed(1) + min;
 }
 
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 const types = [
@@ -14,17 +14,12 @@ const types = [
 ];
 
 function getData() {
-    const type = types[getRandomInt(0, types.length)];
-    let value;
-    if (type === 'ph') {
-      value = getRandomFloat(1, 15);
-    } else {
-      value = getRandomInt(0, 101);
-    }
-    return {
-        type,
-        value
-    };
+    return types.map((type) => {
+        return {
+            type,
+            value: (type === 'ph') ? getRandomFloat(1, 15) : getRandomInt(0, 101)
+        }
+    });
 }
 
 var EventEmitter2 = require('eventemitter2').EventEmitter2;
