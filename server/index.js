@@ -1,13 +1,11 @@
-const five = require('johnny-five');
-const board = new five.Board();
+const port = 6969;
+const ip = require('ip');
 
-board.on('ready', () => {
-  console.log('conecta');
-  const led = new five.Led(13);
+const WebSocketServer = require('uws').Server;
+const wss = new WebSocketServer({ port });
 
-  led.strobe();
+wss.on('connection', function (ws) {
+    console.info('Some client connected!');
 });
 
-board.on('error', (e) => {
-  console.log(e.message);
-});
+console.log(`Listening in ${ip.address()}:${port}`);
