@@ -1,3 +1,4 @@
+'use strict';
 const port = 6969;
 const ip = require('ip');
 
@@ -19,6 +20,7 @@ wss.on('connection', function (ws) {
     console.log('se conecto un guacho!');
 
     const sensor = (data) => {
+        console.log("enviando data al guacho!");
         ws.send(JSON.stringify(data));
     };
 
